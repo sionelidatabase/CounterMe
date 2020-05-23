@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<head lang="en">
+<title>JavaScript</title>
+<meta charset="UTF-8">
+        <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+        <meta http-equiv="X-UA-Compatible" content = "ie=edge">
+    <style>
+    #Button {
+	box-shadow: 0px 0px 0px 2px #9fb4f2;
+	background:linear-gradient(to bottom, #7892c2 5%, #476e9e 100%);
+	background-color:#7892c2;
+	border-radius:4px;
+	border:4px solid #4e6096;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:19px;
+	padding:12px 37px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #283966;
+}
+#Button:hover {
+	background:linear-gradient(to bottom, #476e9e 5%, #7892c2 100%);
+	background-color:#476e9e;
+}
+#Button:active {
+	position:relative;
+	top:1px;
+}    
+    
+        body{
+            font-size:16px;
+            background-color:red;
+        }
+        .sion-code{
+            border-style:dashed;
+            border-color:deeppink;
+            border-radius:4px;
+            border-right-color:deeppink;
+            border-right-style: dashed;
+            border-right-width:6px;
+            
+        }
+        .sion-code{margin-top:16px!important;margin-bottom:16px!important}
+        .sion-code,.sion-codespan{font-family:Consolas,"courier new";font-size:16px}
+        .sion-code{width:auto;background-color:snow;padding:8px 12px;border-left:5px solid green;word-wrap:break-word}
+.sion-codespan{color:red;background-color:gold;padding-left:4px;padding-right:4px;font-size:107%}
+        .sion-codeB{
+            border-style:dashed;
+            border-color:black;
+            border-radius:4px;
+            border-right-color:black;
+            border-right-style:dashed;
+            border-right-width:6px;
+            border-left-width:6px;
+            background:linear-gradient(to bottom, #476e9e 5%, #7892c2 100%);
+	background-color:#476e9e;
+        }
+        .sion-btn{width:100%}
+        .sion-button{width:100%}
+        .sion-btn,.sion-button{border:none;display:inline-block;padding:8px 16px;vertical-align:middle;overflow:hidden;text-decoration:none;color:inherit;background-color:inherit;text-align:center;cursor:pointer;white-space:nowrap}
+.sion-btn:hover{box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)}
+.sion-btn,.sion-button{-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}   
+.sion-disabled,.sion-btn:disabled,.sion-button:disabled{cursor:not-allowed;opacity:0.3}
+        .sion-tag{background-color:black;color:snow;display:inline-block;padding-left:8px;padding-right:8px;text-align:center}
+        #backgroundA{
+            background-color:gold;
+        }
+        #backgroundB{
+            background-color:gold;
+        }
+    </style>
+</head>
+<body>
+    <center>
+<div id="backgroundA"class="sion-code">
+<h1 style="text-align:center;" class="sion-codeB" id="count">0</h1>
+</div>
+    <button id="Button" type="button"onclick="A()">+1</button>
+        
+    <div id="backgroundB" class="sion-code">
+<h1 style="text-align:center;" class="sion-codeB" id="countB">0</h1>
+</div>
+    <button id="Button" type="button" onclick="B()">+2</button>
+    <div id="backgroundA" class="sion-code">
+<h1 style="text-align:center;" class="sion-codeB" id="countC">0</h1>
+</div>
+    <button id="Button" type="button" onclick="C()">+5</button>
+    <div id="backgroundB" class="sion-code">
+<h1 style="text-align:center;" class="sion-codeB" id="countD">0</h1>
+</div>
+    <button id="Button" type="button" onclick="D()">+10</button>
+    <div id="backgroundA" class="sion-code">
+<h1 style="text-align:center;" class="sion-codeB" id="countE">0</h1>
+</div>
+    <button id="Button" type="button" onclick="E()">+20</button>
+    <div id="backgroundB" class="sion-code">
+<h1 style="text-align:center;" class="sion-codeB" id="countF">0</h1>
+</div>
+    <button id="Button" type="button" onclick="F()">+50</button>
+    <div id="backgroundA" class="sion-code">
+<h1 style="text-align:center;" class="sion-codeB" id="countG">0</h1>
+</div>
+    <button id="Button" type="button" onclick="G()">+100</button>
+    <div id="backgroundB" class="sion-code">
+<h1 style="text-align:center;" class="sion-codeB" id="countH">0</h1>
+</div>
+    <button id="Button" type="button" onclick="H()">+200</button>
+        </center>
+<script>
+var add = (function () {
+  var counter = 0;
+  return function () {return counter += 1;}
+})();
+    
+    var addB = (function () {
+        var counterB = 0;
+        return function () {return counterB += 2;}
+    })();
+    
+    var addC = (function () {
+            var counterC = 0;
+            return function () {return counterC +=5;}
+        })();
+    
+    var addD = (function () {
+        var counterD = 0;
+        return function () {return counterD +=10;}
+    })();
+    var addE = (function () {
+        var counterE = 0;
+        return function () {return counterE +=20;}
+    })();
+    var addF = (function () {
+        var counterF = 0;
+        return function () {return counterF +=50;}
+    })();
+    var addG = (function () {
+        var counterG = 0;
+        return function () {return counterG +=100;}
+    })();
+    var addH = (function () {
+        var counterH = 0;
+        return function () {return counterH +=200;}
+    })();
+    //ends of vars.
+//begin function.
+function A(){
+  count.innerHTML = add();
+}
+    function B(){
+        countB.innerHTML = addB();
+    }
+        function C(){
+        countC.innerHTML = addC();
+    }
+    function D(){
+        countD.innerHTML = addD();
+    }
+    function E(){
+        countE.innerHTML = addE();
+    }
+    function F(){
+        countF.innerHTML = addF();
+    }
+    function G(){
+        countG.innerHTML = addG();
+    }
+    function H(){
+        countH.innerHTML = addH();
+    }
+    </script>
+</body>
+</html>
